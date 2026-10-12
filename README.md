@@ -2,7 +2,7 @@
 
 **Domain:** Data Analytics
 **Tasks completed:** 3 of 4 (Web Scraping, EDA, Data Visualization)
-**Author:** _Your Name Here_
+**Author:** Asmit Singh
 
 This repository contains a complete, end-to-end data analytics workflow:
 **collect data (web scraping) -> understand it (EDA) -> communicate it (visualization)**.
