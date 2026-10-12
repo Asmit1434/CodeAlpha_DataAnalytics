@@ -15,3 +15,8 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Internship report (kept private, not published)
+Internship_Report_*.docx
+images/offer_letter.png
+

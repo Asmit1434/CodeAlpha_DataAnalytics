@@ -268,8 +268,14 @@ def build_docx():
     doc.add_page_break()
     para(doc, "INTERNSHIP CERTIFICATE", size=14, bold=True, align="center",
          space_after=12)
-    para(doc, "[ Attach internship certificate / offer letter here ]",
-         size=12, italic=True, align="center")
+    offer_img = os.path.join(IMG, "offer_letter.png")
+    if os.path.exists(offer_img):
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.add_run().add_picture(offer_img, width=Inches(6.0))
+    else:
+        para(doc, "[ Attach internship certificate / offer letter here ]",
+             size=12, italic=True, align="center")
 
     # ---------------- Table of contents ----------------
     doc.add_page_break()
