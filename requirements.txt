@@ -1,0 +1,12 @@
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+requests
+beautifulsoup4
+lxml
+jupyter
+nbconvert
+ipykernel
+nbformat

@@ -1,0 +1,117 @@
+
+======================================================================
+1. DATASET STRUCTURE
+======================================================================
+Shape (rows, columns): (1000, 6)
+
+Column names:
+  - title
+  - price
+  - rating
+  - in_stock
+  - stock_count
+  - category
+
+Data types:
+title              str
+price          float64
+rating           int64
+in_stock          bool
+stock_count      int64
+category           str
+
+First 5 rows:
+                                                                 title  price  rating  in_stock  stock_count category
+0                                              It's Only the Himalayas  45.17       2      True            0   Travel
+1     Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond  49.43       4      True            0   Travel
+2   See America: A Celebration of Our National Parks & Treasured Sites  48.87       3      True            0   Travel
+3  Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel  36.94       2      True            0   Travel
+4                                                 Under the Tuscan Sun  37.33       3      True            0   Travel
+
+======================================================================
+2. DATA QUALITY: MISSING VALUES & DUPLICATES
+======================================================================
+Missing values per column:
+title          0
+price          0
+rating         0
+in_stock       0
+stock_count    0
+category       0
+
+Duplicate titles: 1
+
+======================================================================
+3. SUMMARY STATISTICS (numeric)
+======================================================================
+            price       rating  stock_count
+count  1000.00000  1000.000000       1000.0
+mean     35.07035     2.923000          0.0
+std      14.44669     1.434967          0.0
+min      10.00000     1.000000          0.0
+25%      22.10750     2.000000          0.0
+50%      35.98000     3.000000          0.0
+75%      47.45750     4.000000          0.0
+max      59.99000     5.000000          0.0
+
+======================================================================
+4. CATEGORICAL OVERVIEW
+======================================================================
+Number of categories : 50
+Books in stock       : 1000 / 1000
+
+Top 10 categories by number of books:
+category
+Default           152
+Nonfiction        110
+Sequential Art     75
+Add a comment      67
+Fiction            65
+Young Adult        54
+Fantasy            48
+Romance            35
+Mystery            32
+Food and Drink     30
+
+Rating distribution:
+rating
+1    226
+2    196
+3    203
+4    179
+5    196
+
+======================================================================
+5. HYPOTHESIS TESTS
+======================================================================
+
+H1: Does rating correlate with price?
+    Pearson r = 0.0282   p-value = 3.7360e-01
+    -> NOT significant relationship.
+
+H2: Do book prices differ significantly across categories?
+    One-way ANOVA F = 0.8390   p-value = 7.4446e-01
+    -> NOT significant difference between categories.
+
+======================================================================
+6. ANOMALIES & DATA ISSUES
+======================================================================
+Price IQR: Q1=22.11, Q3=47.46, upper fence=85.48
+Price outliers detected: 0
+
+Most expensive category (avg):
+category
+Suspense     58.330000
+Novels       54.810000
+Politics     53.613333
+Health       51.452500
+New Adult    46.383333
+
+======================================================================
+7. KEY FINDINGS
+======================================================================
+* 1000 books across 50 categories.
+* Average book price: GBP 35.07 (median 35.98).
+* Average rating: 2.92 / 5.
+* Price-rating correlation is weak/none (r=0.028).
+* Best-value categories identified (see findings above).
