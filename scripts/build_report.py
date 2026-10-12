@@ -29,7 +29,7 @@ IMG = os.path.join(ROOT, "images")
 OUT = os.path.join(ROOT, "Internship_Report_Asmit_Singh.docx")
 
 STUDENT = "Asmit Singh"
-ADMISSION = "<< Admission Number >>"
+ADMISSION = "24SCSE1011226"
 TITLE = "Exploratory Data Analysis and Visualization of Web-Scraped Book Market Data"
 
 
